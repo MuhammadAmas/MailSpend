@@ -1,0 +1,99 @@
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin-top: 86px;
+    background-color: transparent;
+}
+
+.gradient-text {
+    background: linear-gradient(91.32deg, #203CF3 52.19%, #3D56F5 99.53%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.connect-card {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: auto; */
+    margin: auto;
+
+    border: 0.8px solid #F0F0F0;
+    box-shadow: 0px 4px 44px 0px #E5E5E5CC;
+    background: #FEFEFE;
+
+
+}
+
+.connect-email-title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #232639;
+
+}
+
+.connect-email-subtitle {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 18px auto;
+    width: 267px;
+    height: 36px;
+    top: 379px;
+    left: 506px;
+    color: #545B88;
+
+}
+
+.google-signin-btn {
+    background: linear-gradient(180deg, #323752 0%, #1F2233 100%);
+    box-shadow: 0px 1.5px 0px 0px #3A3F5F inset;
+    width: 346px;
+    height: 45px;
+    padding: 10px, 53px;
+    border-radius: 8px;
+    top: 12px;
+    margin-bottom: 20px;
+}
+
+.google-signin-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(180deg, #323752 0%, #1F2233 100%) !important;
+
+}
+
+.footer {
+    background: #F2F3F7;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+.footer-text {
+    color: #B3B9D0;
+}
