@@ -5,6 +5,10 @@ import Chat from "./components/Chat/Chat.jsx";
 
 const AppRoutes = [
   {
+    path: "/",
+    element: <Connect />,
+  },
+  {
     path: "/connect",
     element: <Connect />,
   },
