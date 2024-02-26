@@ -1,7 +1,7 @@
 import React from "react";
-import Connect from "./components/Connect/Connect.jsx";
-import PreferencesForm from "./components/PreferencesForm/PreferencesForm.jsx";
-import Chat from "./components/Chat/Chat.jsx";
+import Connect from "./pages/Connect/Connect.jsx";
+import PreferencesForm from "./pages/PreferencesForm/PreferencesForm.jsx";
+import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 
 const AppRoutes = [
   {
@@ -18,8 +18,8 @@ const AppRoutes = [
     element: <PreferencesForm />,
   },
   {
-    path: "/chat",
-    element: <Chat />,
+    path: "/Dashboard",
+    element: <Dashboard />,
   },
 ];
 
