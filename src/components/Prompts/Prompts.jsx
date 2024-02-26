@@ -16,12 +16,12 @@ const cardData = [
     title: "Be smart with your spending",
     content: "Get personalized tips based on your spending habits",
   },
-  {
-    key: "3",
-    title: "What does your bank statement show",
-    content:
-      "See and analyze the latest e-statement from your chosen bank account",
-  },
+  // {
+  //   key: "3",
+  //   title: "What does your bank statement show",
+  //   content:
+  //     "See and analyze the latest e-statement from your chosen bank account",
+  // },
 ];
 
 const Prompts = () => {
@@ -33,7 +33,7 @@ const Prompts = () => {
           style={{
             background: key === "2" ? "#3D56F5" : "F9F9FB",
             marginBottom: "1rem",
-            padding: "12px 12px",
+            // padding: "12px 12px",
           }}
         >
           <Title

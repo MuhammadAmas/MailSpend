@@ -75,7 +75,14 @@ const Dashboard = () => {
           <ChatInput />
         </Col>
         <Col span={14}>
-          <Col span={12}>
+          <Col
+            span={12}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+            }}
+          >
             <SpendingChart data={spendingData} />
             <Prompts />
           </Col>
