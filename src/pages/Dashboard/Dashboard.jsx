@@ -19,6 +19,34 @@ const spendingData = [
 
   // ... more data
 ];
+const spendings = [
+  { name: "Foodpanda", date: "2024-02-21", time: "2:32 AM", amount: 2504 },
+  { name: "Foodpanda", date: "2024-02-21", time: "2:32 AM", amount: 2504 },
+  { name: "Foodpanda", date: "2024-02-21", time: "2:32 AM", amount: 2504 },
+  { name: "Foodpanda", date: "2024-02-21", time: "2:32 AM", amount: 2504 },
+  { name: "Foodpanda", date: "2024-02-21", time: "2:32 AM", amount: 2504 },
+  { name: "Foodpanda", date: "2024-02-21", time: "2:32 AM", amount: 2504 },
+
+  // Add more spending items as needed
+];
+
+const SpendingItems = ({ spendingItems }) => (
+  <div className="ms-box box-spending">
+    <h3 className="ms-box_heading ms-mb-15">Recent spending</h3>
+    {spendingItems.map((item, index) => (
+      <div key={index} className="ms-box-item">
+        <div className="ms-item-info">
+          <p className="ms-item-name">{item.name}</p>
+          <p className="ms-item-date">
+            {item.date}, {item.time}
+          </p>
+        </div>
+        <p className="ms-item-spent">Rs. {item.amount}</p>
+      </div>
+    ))}
+  </div>
+);
+
 const Dashboard = () => {
   return (
     <div className="dashboard-container">
@@ -108,14 +136,6 @@ const Dashboard = () => {
               Weekly
               <RightOutlined />
             </h3>
-            {/* <p
-              class="ms-box_subheading"
-              style={{
-                color: "#ACBCF7",
-              }}
-            >
-              See tips to overcome financial burdens
-            </p>*/}
           </div>
           <div class="ms-box box-small">
             <h3 class="ms-box_heading">Quick Prompts</h3>
@@ -125,57 +145,7 @@ const Dashboard = () => {
             <h3 class="ms-box_heading">Top Categories</h3>
             <p class="ms-box_subheading">See your top spending categories</p>
           </div>
-          {/* <div class="ms-box box-small">
-            <h3 class="ms-box_heading">Tips & Tricks</h3>
-            <p class="ms-box_subheading">
-              See tips to overcome financial burdens
-            </p>
-          </div> */}
-          <div class="ms-box box-spending">
-            <h3 class="ms-box_heading ms-mb-15">Recent spending</h3>
-            <div class="ms-box-item">
-              <div class="ms-item-info">
-                <p class="ms-item-name">Foodpanda</p>
-                <p class="ms-item-date">21st February, 2:32 AM</p>
-              </div>
-              <p class="ms-item-spent">Rs. 2504</p>
-            </div>
-            <div class="ms-box-item">
-              <div class="ms-item-info">
-                <p class="ms-item-name">Foodpanda</p>
-                <p class="ms-item-date">21st February, 2:32 AM</p>
-              </div>
-              <p class="ms-item-spent">Rs. 2504</p>
-            </div>
-            <div class="ms-box-item">
-              <div class="ms-item-info">
-                <p class="ms-item-name">Foodpanda</p>
-                <p class="ms-item-date">21st February, 2:32 AM</p>
-              </div>
-              <p class="ms-item-spent">Rs. 2504</p>
-            </div>
-            <div class="ms-box-item">
-              <div class="ms-item-info">
-                <p class="ms-item-name">Foodpanda</p>
-                <p class="ms-item-date">21st February, 2:32 AM</p>
-              </div>
-              <p class="ms-item-spent">Rs. 2504</p>
-            </div>
-            <div class="ms-box-item">
-              <div class="ms-item-info">
-                <p class="ms-item-name">Foodpanda</p>
-                <p class="ms-item-date">21st February, 2:32 AM</p>
-              </div>
-              <p class="ms-item-spent">Rs. 2504</p>
-            </div>
-            <div class="ms-box-item">
-              <div class="ms-item-info">
-                <p class="ms-item-name">Foodpanda</p>
-                <p class="ms-item-date">21st February, 2:32 AM</p>
-              </div>
-              <p class="ms-item-spent">Rs. 2504</p>
-            </div>
-          </div>
+          <SpendingItems spendingItems={spendings} />
         </Col>
       </Row>
     </div>
