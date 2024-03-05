@@ -2,6 +2,7 @@ import React from "react";
 import { Layout, Card, Button, Typography } from "antd";
 import { GoogleOutlined } from "@ant-design/icons";
 import "./Connect.css";
+import { Link } from "react-router-dom";
 
 const { Header, Footer } = Layout;
 const { Text } = Typography;
@@ -22,13 +23,15 @@ const ConnectCard = () => (
     <Text className="connect-email-subtitle">
       Understand your spending habits and make smarter financial decisions.
     </Text>
-    <Button
-      type="primary"
-      icon={<GoogleOutlined />}
-      className="google-signin-btn"
-    >
-      Continue with Google
-    </Button>
+    <Link to="/preferences">
+      <Button
+        type="primary"
+        icon={<GoogleOutlined />}
+        className="google-signin-btn"
+      >
+        Continue with Google
+      </Button>
+    </Link>
   </Card>
 );
 

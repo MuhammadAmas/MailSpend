@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Card, Button, Row, Col } from "antd";
 import { LeftOutlined } from "@ant-design/icons";
 import "./PreferencesForm.css"; // Make sure you have the corresponding CSS file
+import { Link } from "react-router-dom";
 
 const financialGoals = [
   { label: "Save for retirement", value: "saveForRetirement" },
@@ -52,13 +53,15 @@ const PreferencesForm = () => {
             </div>
           ))}
         </div>
-        <Button
-          type="primary"
-          className="preferences-next-button"
-          disabled={selectedGoals.length !== 3}
-        >
-          Next
-        </Button>
+        <Link to="/Dashboard">
+          <Button
+            type="primary"
+            className="preferences-next-button"
+            disabled={selectedGoals.length !== 3}
+          >
+            Next
+          </Button>
+        </Link>
       </Card>
     </div>
   );
